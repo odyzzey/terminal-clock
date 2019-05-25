@@ -12,13 +12,17 @@ namespace Clock
         {
             DrawBorder();
             DrawSmallTime();
-            Console.ReadKey();
+            while(true)
+            {
+                DrawSmallTime();
+            }
         }
 
         static void DrawSmallTime()
         {
             Console.SetCursorPosition(((int)w / 2) - 4, ((int)h / 2)); /* 8 character time so the cursor is pushed back 4 characters from the center */
             Console.Write(DateTime.Now.ToString("HH:mm:ss"));
+            Console.SetCursorPosition(0, h);
         }
 
         static void DrawBorder()
