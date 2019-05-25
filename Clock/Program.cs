@@ -4,6 +4,10 @@ namespace Clock
 {
     class Program
     {
+        //set width and height of console
+        static int w = Console.WindowWidth;
+        static int h = Console.WindowHeight;
+
         static void Main(string[] args)
         {
             DrawBorder();
@@ -12,14 +16,10 @@ namespace Clock
 
         static void DrawSmallTime()
         {
-
         }
 
         static void DrawBorder()
         {
-            //get width and height of console
-            var w = Console.WindowWidth;
-            var h = Console.WindowHeight;
 
             for (int i = 2; i <= h; i++) //Starting at 2 because that's where the ceiling will be
             {
